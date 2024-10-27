@@ -1,12 +1,19 @@
 employee_name = input("enter employee's name: ")
-employee_shift_count = input("enter number of shifts employee has: ")
-number_of_transactions = input("enter employees number of transactions: ")
-dollar_value = input("enter transaction dollar value of employee: ")
+employee_shift_count = int(input("enter number of shifts employee has: "))
+number_of_transactions = int(input("enter employees number of transactions: "))
+dollar_value = float(input("enter transaction dollar value of employee: "))
 
-#productivity score dividing an employees transactions dollar value number of transactions then dividing by the number of shifts worked.
+employee_productivity = dollar_value / number_of_transactions
 
-employee_productivity = (dollar_value / number_of_transactions)
-productivity_score = (employee_productivity / employee_shift_count)
+productivity_score = employee_productivity / employee_shift_count
+if productivity_score <= 30:
+    productivity_score = 50.00
+elif 31 <= productivity_score <= 69:
+    productivity_score = 75.00
+elif 70 <= productivity_score < 200:
+    productivity_score = 100.00
+elif productivity_score >= 200:
+    productivity_score = 200.00
 
 print("Employee Name:" + employee_name)
-print("Employee Bonus:" + productivity_score)
+print("Employee Bonus:" + "$" + str(productivity_score))
