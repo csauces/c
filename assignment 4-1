@@ -1,35 +1,31 @@
-"""
-This program calculates prices for custom house signs.
-"""
-
 # Declare and initialize variables here.
-
-min_charge = 35.00
-additional_chars_charge = 4.00
+minimum_charge = 35.00 
+additional_character_charge = 4.00
 color_charge = 0.00
-wood_charge = 0.00
+wood_charge = 0.00 
 
-# Charge for this sign.
+# Get the number of characters and convert to an integer
+numChars = int(input("Enter the number of characters: "))
 
-numChars = int(input("number of characters: "))
-
+# Calculate total charge based on number of characters
 def calculate_charge(numChars):
-     if numChars <= 5:
-        return min_charge
-     else:
-         additional_chars_charge = numChars - 5
-        return min_charge + (additional_chars * additional_chars_charge)
+    if numChars <= 5:
+        return minimum_charge
+    else:
+        additional_chars = numChars - 5
+        return minimum_charge + (additional_chars * additional_character_charge)
 
-# Color of characters.
-color = input("enter color: ")
-if color.lower(): == "gold":
+
+color = input("Enter the color of characters: ")
+if color.lower() == "gold":
     color_charge += 15.00
-# Type of wood.
-woodtype = input("enter wood type")
-if woodtype.lower(): == "oak"
+
+woodType = input("Enter the type of wood: ")
+if woodType.lower() == "oak":
     wood_charge += 20.00
 
-# Write assignment and if statements here as appropriate.
+# Calculate final charge
 charge = calculate_charge(numChars) + color_charge + wood_charge
-# Output Charge for this sign.
+
+# Output Charge for this sign
 print(f"The charge for this sign is: ${charge:.2f}")
