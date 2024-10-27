@@ -1,0 +1,17 @@
+
+
+#lets start coffe shop
+#building robot barista
+
+print("hello welcome to coffee shop")
+
+name = input("whatgs your name?\n")
+
+print("hello " + name + " welcome!")
+
+print("Heres our menu what would you like?\n")
+
+print("Black Coffee\n" "Latte\n" "Iced Coffee\n" "Espresso")
+order = input()
+
+print("Okay " + name + " I have uh " + order + " That will be right out" )
