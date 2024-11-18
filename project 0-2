@@ -1,0 +1,36 @@
+AllowedVehiclesList = ['Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck', 'Toyota Tundra', 'Nissan Titan']
+
+print("********************************")
+print("AutoCountry Vehicle Finder v0.1")
+print("********************************")
+print("Please Enter the following number below from the following menu:\n")
+
+print("1. PRINT all Authorized Vehicles")
+print("2. SEARCH for Authorized Vehicle")
+print("3. Exit")
+
+choice = input("\nChoose 1, 2 or 3: ")
+
+if choice == '1':
+    print("The AutoCountry sales manager has authorized the purchase and selling of the following vehicles:")
+    for vehicle in AllowedVehiclesList:
+        print(vehicle)
+
+elif choice == '2':
+    vehicle_name = input("Please enter the vehicle's full name: \n")
+    if vehicle_name in AllowedVehiclesList:
+        print(f"{vehicle_name} is an authorized vehicle.")
+    else:
+        print(f"{vehicle_name} is not an authorized vehicle, if you received this in error please check the spelling and try again.")
+
+elif choice == '3':
+    print("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
+
+print("********************************")
+print("AutoCountry Vehicle Finder v0.1")
+print("********************************")
+print("Please Enter the following number below from the following menu:\n")
+
+print("1. PRINT all Authorized Vehicles")
+print("2. SEARCH for Authorized Vehicle")
+print("3. Exit")
